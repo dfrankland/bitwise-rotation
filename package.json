@@ -1,7 +1,7 @@
 {
   "name": "bitwise-rotation",
   "version": "1.0.0",
-  "description": "Rotate bytes with a bitwise rotation.",
+  "description": "Rotate values with a bitwise rotation.",
   "main": "./dist/index.js",
   "files": [
     "dist/index.js"

@@ -1,5 +1,7 @@
 # bitwise-rotation
 
+Rotate values with a bitwise rotation.
+
 > In computer programming, a circular shift (or **bitwise rotation**) is a shift
 > operator that shifts all bits of its operand. Unlike an arithmetic shift, a
 > circular shift does not preserve a number's sign bit or distinguish a number's
@@ -17,7 +19,7 @@ const int8BitwiseRotation = bitwiseRotation(8);
 // Returns an object with rotate right (`ror`) and rotate left (`rol`) methods.
 const { ror, rol } = int8BitwiseRotation;
 
-// Rotate a byte by an amount.
+// Rotate a value by an amount.
 rol(101, 2); // 149
 ror(101, 2); // 89
 ```

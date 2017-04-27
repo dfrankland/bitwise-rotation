@@ -23,18 +23,18 @@ const bitwiseRotation = bitWidth => {
   const maskedRotation = (rotation) => rotation & (bitWidth - 1);
 
   return {
-    ror: (byte, r) => {
+    ror: (value, r) => {
       const rotation = maskedRotation(r);
       return (
-        (byte >>> rotation) |
-        ((byte << (bitWidth - rotation)) & bitMask)
+        (value >>> rotation) |
+        ((value << (bitWidth - rotation)) & bitMask)
       );
     },
-    rol: (byte, r) => {
+    rol: (value, r) => {
       const rotation = maskedRotation(r);
       return (
-        ((byte << rotation) & bitMask) |
-        (byte >>> (bitWidth - rotation))
+        ((value << rotation) & bitMask) |
+        (value >>> (bitWidth - rotation))
       );
     },
   };
