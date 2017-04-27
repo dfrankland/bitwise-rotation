@@ -6,7 +6,7 @@
 const MAX_BIT_WIDTH = 32;
 const MIN_BIT_WIDTH = 0;
 
-export default bitWidth => {
+const bitwiseRotation = bitWidth => {
   if (typeof bitWidth !== 'number') {
     throw new Error('Bit width must be a number');
   }
@@ -38,4 +38,18 @@ export default bitWidth => {
       );
     },
   };
+};
+
+const { ror: rorInt8, rol: rolInt8 } = bitwiseRotation(MAX_BIT_WIDTH / 4);
+const { ror: rorInt16, rol: rolInt16 } = bitwiseRotation(MAX_BIT_WIDTH / 2);
+const { ror: rorInt32, rol: rolInt32 } = bitwiseRotation(MAX_BIT_WIDTH);
+
+export default bitwiseRotation;
+export {
+  rorInt8,
+  rolInt8,
+  rorInt16,
+  rolInt16,
+  rorInt32,
+  rolInt32,
 };
