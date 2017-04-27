@@ -45,7 +45,7 @@ rorInt8(value, 1).toString(2); // 10000000
 
 ### `bitwiseRotation(bitWidth)` (`default`)
 
-A function to specify a custom bitWidth that returns a `rotationObject`.
+A function to specify a custom `bitWidth` that returns a `rotationObject`.
 
 *   `bitWidth`: An integer between \[0, 32\] that specifies the limit for
     rotating values.
