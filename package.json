@@ -1,0 +1,61 @@
+{
+  "name": "bitwise-rotation",
+  "version": "0.0.0",
+  "description": "Rotate bytes with a bitwise rotation.",
+  "main": "./dist/index.js",
+  "files": [
+    "dist/index.js"
+  ],
+  "scripts": {
+    "build": "rollup -c ./rollup.config.js",
+    "pretest": "npm run build",
+    "test": "babel-node ./src/test.js",
+    "prepublish": "npm run build"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dfrankland/bitwise-rotation.git"
+  },
+  "keywords": [
+    "bitwise",
+    "rotation",
+    "byte",
+    "bytes",
+    "bits",
+    "bit",
+    "circular",
+    "shift"
+  ],
+  "author": "Dylan Frankland",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dfrankland/bitwise-rotation/issues"
+  },
+  "homepage": "https://github.com/dfrankland/bitwise-rotation#readme",
+  "contributors": [],
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.4.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "rollup": "^0.41.6",
+    "rollup-plugin-babel": "^2.7.1"
+  },
+  "dependencies": {},
+  "babel": {
+    "sourceMaps": true,
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ],
+      "stage-0"
+    ]
+  }
+}
