@@ -7,9 +7,8 @@
     "dist/index.js"
   ],
   "scripts": {
-    "build": "rollup -c ./rollup.config.js",
+    "build": "node scripts/build.mjs",
     "pretest": "npm run build",
-    "test": "babel-node ./src/test.js",
     "prepublish": "npm run build"
   },
   "engines": {
@@ -37,25 +36,6 @@
   "homepage": "https://github.com/dfrankland/bitwise-rotation#readme",
   "contributors": [],
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-preset-env": "^1.4.0",
-    "babel-preset-stage-0": "^6.24.1",
-    "rollup": "^0.41.6",
-    "rollup-plugin-babel": "^2.7.1"
-  },
-  "dependencies": {},
-  "babel": {
-    "sourceMaps": true,
-    "presets": [
-      [
-        "env",
-        {
-          "targets": {
-            "node": "current"
-          }
-        }
-      ],
-      "stage-0"
-    ]
+    "esbuild": "^0.17.15"
   }
 }
